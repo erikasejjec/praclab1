@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int tamcad(string cadena)
+{
+    int cont=0;
+    while (cadena[cont]!='\0')
+        cont++;
+    return cont;
+}
+
+int main()
+{
+    string cadena;
+    cout << "Ingresa la cadena: \n";
+    getline(cin,cadena);
+    cout<<tamcad(cadena)<<endl;
+    return 0;
+}
