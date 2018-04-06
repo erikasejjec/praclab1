@@ -1,0 +1,9 @@
+int main()
+{
+    int a = 5;
+    int &p = a;
+    p = 10;
+    cout << "nuevo valor por valor: " << p <<endl;
+    cout << "nuevo valor por referencia: " << &p <<endl;
+    return 0;
+}
