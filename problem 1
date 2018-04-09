@@ -1,9 +1,14 @@
+
+void valref(int &p){
+    p=10;
+    cout << "por valor: " << p <<endl;
+    cout << "por referencia: " << &p <<endl;
+}
+
 int main()
 {
-    int a = 5;
-    int &p = a;
-    p = 10;
-    cout << "nuevo valor por valor: " << p <<endl;
-    cout << "nuevo valor por referencia: " << &p <<endl;
+    cout<<"problem 1 \n";
+    int y=5;
+    valref(y);
     return 0;
 }
