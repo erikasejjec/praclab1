@@ -20,24 +20,19 @@ void mostrar(double  M[][10] ,double  f,double  c)
     }
 }
 void mulmatri(double  M[][10],double  f,double  c,double  n[][10],double  f2,double  c2,double  m[10][10])
-{
-    int con=0;
-    for(int k=0;k<f;k++)
-    {
-        for(int i=0;i<c;i++)
-        {
-            int cont=0;
-            for(int j=0;j<c;j++){
-                cont = cont +(M[j][i]*n[i][j]);
-                cout<<M[j][i]<<n[i][j]<<" "<<cont<<endl;}
-         m[k][i]=cont;
+    for(int i=0; i<f; i++){
+        for(int j=0; j<c; j++){
+            m[i][j]=0;
+            for(int k=0; k<c2; k++)
+                m[i][j]= m[i][j]+(M[i][k]*m[k][j]);
         }
     }
 }
 
+
 int main()
 {
-     double M[10][10],n[10][10],m[10][10],f,c,f2,c2;
+    double M[10][10],n[10][10],m[10][10],f,c,f2,c2;
     cout<<"matriz 1 \n"<<"fila? ";cin>>f;
     cout<<"colmna? ";cin>>c;
     ingresar(M,f,c);
